@@ -4,7 +4,7 @@
 
 Each agent is one Markdown file in [`.claude/agents/`](.claude/agents/). The front matter sets its name, when to use it, model and color. The body sets its role, behaviors and hard limits.
 
-For a visual overview, open [`docs/agent-roster.html`](docs/agent-roster.html) in a browser. It has the workflow diagram, each agent's persona and role, and the safety review.
+For the full visual overview (workflow, each agent's persona and role, safety review), see the [agent roster page](https://tinle1986.github.io/ai-agent-flavors-v1/agent-roster.html), or open [`docs/agent-roster.html`](docs/agent-roster.html) locally in a browser.
 
 ## Install
 
@@ -47,6 +47,8 @@ Run `/agents` in Claude Code to check they loaded.
 ## How they work together
 
 You don't need all 19 for every job. A solo side project might use five; an enterprise program might use all of them. The general loop:
+
+![Agent collaboration workflow: six stages from validating the bet to measuring results, with owner approval gates between stages and a feedback loop into the next plan](docs/workflow.svg)
 
 1. **Validate the bet.** CEO, Finance, Data Analyst, Copywriter. *Gate: owner approves go / no-go.*
 2. **Plan.** Product Owner, BA, UI/UX, Scrum Master. *Gate: Definition of Ready.*
