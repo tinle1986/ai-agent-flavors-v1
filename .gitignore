@@ -1,0 +1,24 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Personal Claude Code settings and state (keep shared agents only)
+.claude/settings.local.json
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+CLAUDE.local.md
+
+# Secrets, just in case
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Scratch
+tmp/
+*.log
