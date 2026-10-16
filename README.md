@@ -93,7 +93,7 @@ Builder roles (FS, QA, DevOps, DBA, data engineer, security, AI harness) usually
 
 ## Customizing
 
-- **Model:** most agents use `sonnet`; `senior-FS` and `senior-modern-QA` use `opus`. Change `model:` to fit your budget.
+- **Model:** every agent uses `sonnet` to keep token costs predictable. Raise a single agent to `opus` only for work that clearly needs it, and expect much higher token use.
 - **Descriptions:** the `description` field decides when Claude dispatches an agent. Keep each one specific and distinct from the others.
 - **Project rules win:** every agent reads the project's `CLAUDE.md` and decision docs first, so put your constraints there.
 

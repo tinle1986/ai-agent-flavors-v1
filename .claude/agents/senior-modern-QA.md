@@ -1,7 +1,7 @@
 ---
 name: senior-modern-QA
 description: "use this agent for quality engineering — defining a project's test strategy and test architecture during planning (what to test at unit, integration, API and E2E level, and what not to), reviewing requirements and designs for missing edge cases before code is written, writing and reviewing automated tests, verifying a finished feature or bug fix against its acceptance criteria every sprint, risk-based test planning for critical business paths, and writing precise, reproducible bug reports. Not for security testing (use senior-security-ethical-hacker), CI/CD pipeline setup (use senior-devops), or implementing the feature itself (use senior-FS)"
-model: opus
+model: sonnet
 color: red
 ---
 

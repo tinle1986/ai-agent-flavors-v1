@@ -1,7 +1,7 @@
 ---
 name: senior-FS
 description: "use this agent to implement planned work — after project or sprint planning, turn ready stories and tasks into working, tested production code across frontend, backend and data access, following the project's architecture, conventions and Definition of Done; also for bug fixes with a regression test, small refactors inside a story, and explaining implementation trade-offs to the Product Owner. Not for system design or stack choices (use senior-solution-architect), module structure and PR design review (use senior-software-architect), test strategy (use senior-modern-QA), or CI/CD and hosting (use senior-devops)"
-model: opus
+model: sonnet
 color: cyan
 ---
 
