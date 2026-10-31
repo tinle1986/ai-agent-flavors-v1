@@ -143,14 +143,14 @@ footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line)
 
 <div class="wrap">
   <header>
-    <span class="eyebrow">ai-agent-flavors-v1 · agent roster · reviewed 12 Oct 2026</span>
-    <h1>19 Claude Code agents, one company's worth of roles</h1>
+    <span class="eyebrow">ai-agent-flavors-v1 · agent roster · reviewed 31 Oct 2026</span>
+    <h1>20 Claude Code agents, one company's worth of roles</h1>
     <p class="lede">How the agents work together from the business bet to shipped code and back to the next plan, then each agent's persona, role and safety review. Every fix from the review has been applied. The agent files are in <code>.claude/agents/</code>, and the <code>README.md</code> explains how to install them.</p>
   </header>
 
   <div class="verdict">
-    <div class="vbox"><span class="eyebrow">Safe to publish</span><span class="big">Yes, all 19</span><p>No secrets, keys, emails, personal paths, internal URLs, employer names or hidden Unicode in any file.</p></div>
-    <div class="vbox"><span class="eyebrow">Safe to run</span><span class="big">19 of 19</span><p>Every agent has hard limits on outward actions, secret redaction, and treating outside content as data, not instructions.</p></div>
+    <div class="vbox"><span class="eyebrow">Safe to publish</span><span class="big">Yes, all 20</span><p>No secrets, keys, emails, personal paths, internal URLs, employer names or hidden Unicode in any file.</p></div>
+    <div class="vbox"><span class="eyebrow">Safe to run</span><span class="big">20 of 20</span><p>Every agent has hard limits on outward actions, secret redaction, and treating outside content as data, not instructions.</p></div>
     <div class="vbox"><span class="eyebrow">Repo</span><span class="big">Ready</span><p>README, MIT license and <code>.gitignore</code> added. Commits use a GitHub no-reply address.</p></div>
   </div>
 
@@ -158,7 +158,7 @@ footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line)
     <div class="sec-head">
       <span class="eyebrow">How they work together</span>
       <h2>From business bet to shipped feature, and back</h2>
-      <p>The 19 agents are the roles a full company could have. You don't call all of them for every job; you call the roles the work needs. The diagram shows the general case: six stages, the deliverable each stage passes to the next, and the gate where a human approves before work moves on.</p>
+      <p>19 of the agents are the roles a full company could have; the 20th, the career coach, works for one person and sits outside this loop. You don't call all of them for every job; you call the roles the work needs. The diagram shows the general case: six stages, the deliverable each stage passes to the next, and the gate where a human approves before work moves on.</p>
     </div>
     <figure>
       <div class="flow-scroll" id="flow-svg"></div>
@@ -188,7 +188,7 @@ footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line)
     <div class="sec-head"><h2>Safety model</h2><p>The same baseline in every agent, plus role-specific limits on each card below.</p></div>
     <div class="tiers">
       <div class="tier">
-        <span class="pill good">applied to all 19</span>
+        <span class="pill good">applied to all 20</span>
         <h3>Baseline hard limits</h3>
 <pre>- Never commit, push, deploy, publish or post
   unless the owner asks for that specific
@@ -228,8 +228,8 @@ tools: Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch</pre>
         <tr><td>Secrets and keys</td><td><span class="pill good">clean</span></td><td>No API key, token, password, private key or cloud credential patterns.</td></tr>
         <tr><td>Personal data</td><td><span class="pill good">clean</span></td><td>No email addresses, home paths, phone numbers or names.</td></tr>
         <tr><td>Hidden text</td><td><span class="pill good">clean</span></td><td>No invisible or bidirectional Unicode and no HTML comments that could smuggle instructions.</td></tr>
-        <tr><td>Agent front matter</td><td><span class="pill good">valid</span></td><td>All 19 have name, description, model and color, and each name matches its filename.</td></tr>
-        <tr><td>Hard limits</td><td><span class="pill good">19 / 19</span></td><td>Each file has outward-action, secret-redaction and untrusted-input rules.</td></tr>
+        <tr><td>Agent front matter</td><td><span class="pill good">valid</span></td><td>All 20 have name, description, model and color, and each name matches its filename.</td></tr>
+        <tr><td>Hard limits</td><td><span class="pill good">20 / 20</span></td><td>Each file has outward-action, secret-redaction and untrusted-input rules.</td></tr>
         <tr><td>Git author</td><td><span class="pill good">private</span></td><td>Set for this repo only to the GitHub no-reply address.</td></tr>
         <tr><td>License</td><td><span class="pill good">MIT</span></td><td>Anyone can reuse and adapt the agents with attribution.</td></tr>
         <tr><td>README</td><td><span class="pill good">added</span></td><td>Install steps, agent index, workflow, safety model and customization.</td></tr>
@@ -241,7 +241,7 @@ tools: Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch</pre>
   <section>
     <div class="sec-head"><h2>The roster</h2><p>Each card shows the agent's persona, its business and technical role, when to call it, what keeps it safe, and what changed in this review.</p></div>
     <div class="toolbar" role="group" aria-label="Filter agents">
-      <button class="filter" data-f="all" aria-pressed="true">All 19</button>
+      <button class="filter" data-f="all" aria-pressed="true">All 20</button>
       <button class="filter" data-f="changed" aria-pressed="false">Changed in review</button>
       <button class="filter" data-f="same" aria-pressed="false">Unchanged</button>
     </div>
@@ -265,8 +265,8 @@ const A = [
   biz:"Runway, budgets, unit economics, cost audits, fundraising readiness, lawful tax planning.",
   tech:"Cloud and SaaS cost audits, models built from shown formulas or scripts.",
   use:"Build a 12-month runway model with conservative, base and optimistic scenarios.",
-  safe:["Never moves money, files taxes or contacts banks unasked","Masks account numbers and tax IDs","Refuses tax evasion and misleading statements"],
-  changed:[]},
+  safe:["Never moves money, files taxes or contacts banks unasked","Masks account numbers, tax IDs and credentials","Refuses tax evasion and misleading statements"],
+  changed:["Added commit/push and credential-redaction rules"]},
  {g:"Business & growth", id:"senior-freelancer-entrepreneur", c:"cyan", m:"sonnet", tier:"Advisory",
   persona:"Indie maker and honest super-affiliate who has watched people burn months on the wrong channel.",
   biz:"Monetization channels, pricing, proposals, launches, affiliate programs, paid traffic maths.",
@@ -274,6 +274,13 @@ const A = [
   use:"Turn my VS Code extension into income: a first-dollar plan with a 30/60/90-day checkpoint.",
   safe:["Bans fake reviews, cookie stuffing, MLM and undisclosed affiliate links","Never creates accounts, posts, spends or pushes code unasked","No income promises"],
   changed:["Added commit/push to the act-only-when-asked list","Redacts credentials and API keys","Title changed from Elite to Senior"]},
+ {g:"Business & growth", id:"senior-career-coach", c:"green", m:"sonnet", tier:"Advisory",
+  persona:"Former hiring manager and executive-search partner who tells you what the hiring committee will really think.",
+  biz:"Career direction, promotions, offers and total-compensation negotiation, from first job to executive.",
+  tech:"Tech resumes, GitHub and portfolio proof, coding and system-design interview prep, AI-era role strategy.",
+  use:"I'm a mid-level backend engineer. Plan my move into an AI engineer role in 90 days, with a resume rewrite and target companies.",
+  safe:["No fake experience, competing offers or screening-software tricks","No interview cheating or mass auto-applying","Never applies, messages or posts unasked"],
+  changed:["New agent, added in this update","Added commit/push and credential-redaction rules","Title changed from Elite to Senior"]},
  {g:"Business & growth", id:"senior-copywriter-growth-marketer", c:"orange", m:"sonnet", tier:"Advisory",
   persona:"Evidence-led copywriter who would rather lose a click than a customer's trust.",
   biz:"Landing pages, emails, positioning, campaign blueprints, A/B hypotheses.",
@@ -503,8 +510,10 @@ const TEAMS = [
   a:[["Freelancer","cyan"],["UI/UX","magenta"],["Full-Stack","cyan"],["QA","red"],["DevOps","pink"],["Finance (optional)","green"]]},
  {t:"Startup MVP", n:"9–12 agents", d:"Validate the bet fast, build lean, measure honestly.",
   a:[["CEO / BizDev","purple"],["Finance","green"],["Product Owner","blue"],["BA","yellow"],["UI/UX","magenta"],["Solution Architect","orange"],["Software Architect","yellow"],["Full-Stack","cyan"],["QA","red"],["Security","red"],["DevOps","pink"],["Data Analyst","blue"]]},
- {t:"Enterprise program", n:"up to all 19", d:"Many teams, regulated data, formal gates. Add the specialists.",
+ {t:"Enterprise program", n:"up to 19 roles", d:"Many teams, regulated data, formal gates. Add the specialists.",
   a:[["Everything in MVP","blue"],["Scrum Master","orange"],["DBA","blue"],["Data Engineer","pink"],["Tech Writer","green"],["Copywriter","orange"],["AI Harness (if AI)","purple"]]},
+ {t:"Career move", n:"1–3 agents", d:"One person changing role, level or path. Outside the delivery loop.",
+  a:[["Career Coach","green"],["Freelancer (if going independent)","cyan"],["Finance (equity, offer maths)","green"]]},
 ];
 document.getElementById("teams").innerHTML = TEAMS.map(t => `<div class="team"><h3>${t.t}</h3><span class="size">${t.n}</span><p class="note">${t.d}</p><div class="chips">${t.a.map(a => `<span style="--dot: var(--c-${a[1]})">${esc(a[0])}</span>`).join("")}</div></div>`).join("");
 

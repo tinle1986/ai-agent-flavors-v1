@@ -1,6 +1,6 @@
 # ai-agent-flavors
 
-19 [Claude Code subagents](https://docs.claude.com/en/docs/claude-code/sub-agents) that cover the roles of a company, from strategy and finance to product, architecture, engineering, QA, security and operations. Copy the ones a project needs into that project, and Claude Code will dispatch work to them.
+20 [Claude Code subagents](https://docs.claude.com/en/docs/claude-code/sub-agents): 19 that cover the roles of a company, from strategy and finance to product, architecture, engineering, QA, security and operations, plus a personal career coach. Copy the ones a project needs into that project, and Claude Code will dispatch work to them.
 
 Each agent is one Markdown file in [`.claude/agents/`](.claude/agents/). The front matter sets its name, when to use it, model and color. The body sets its role, behaviors and hard limits.
 
@@ -27,6 +27,7 @@ Run `/agents` in Claude Code to check they loaded.
 | Business | `ceo-business-development-director` | Strategy, pricing, go/no-go, partnerships, investor narrative |
 | | `senior-finance-expert` | Runway, budgets, unit economics, cost audits, financial models |
 | | `senior-freelancer-entrepreneur` | Turning a person's skills or side projects into income |
+| | `senior-career-coach` | Career direction, resumes, job search, interviews, offers and promotions |
 | | `senior-copywriter-growth-marketer` | Positioning, landing pages, emails, campaigns, A/B hypotheses |
 | | `senior-data-analyst-bi` | KPIs, dashboards, funnel and cohort analysis, experiment readouts |
 | Product & delivery | `senior-product-owner` | Sprint goals, priorities, scope against OKRs and SLAs, sprint review |
@@ -46,7 +47,7 @@ Run `/agents` in Claude Code to check they loaded.
 
 ## How they work together
 
-You don't need all 19 for every job. A solo side project might use five; an enterprise program might use all of them. The general loop:
+You don't need every agent for every job. A solo side project might use five; an enterprise program might use all of them. The general loop:
 
 ![Agent collaboration workflow: six stages from validating the bet to measuring results, with owner approval gates between stages and a feedback loop into the next plan](docs/workflow.svg)
 
@@ -62,6 +63,7 @@ Suggested starting teams:
 - **Solo side project:** freelancer-entrepreneur, ui-ux-designer, FS, modern-QA, devops.
 - **Startup MVP:** add CEO, finance, product-owner, BA, solution-architect, software-architect, security, data-analyst.
 - **Enterprise:** add scrum-master, DBA, data-engineer, technical-writer, copywriter, ai-harness-engineer as needed.
+- **Career move:** career-coach on its own; add freelancer-entrepreneur if going independent, and finance-expert for equity or offer maths. The career coach sits outside the delivery loop above.
 
 ## Safety model
 
